@@ -8,7 +8,9 @@ import PropTypes from "prop-types"
     const [namaTeman, setNamaTeman] = useState('')
     const [data, setData] = useState([])
     const formattedText = namaTeman.replace(/\s+/g, "_");
-   console.log(formattedText);
+  //  console.log(formattedText);
+    const [status, setStatus] = useState(false)
+    const [konf, setKonf] = useState(false)
 
     useEffect(() => {
       const getData = async () => {
@@ -39,16 +41,20 @@ import PropTypes from "prop-types"
                     \n\n*${data?.namaMempelai}*`
     const handleShare = async () => {
         if (!namaTeman.trim()) {
-        alert("Masukkan nama teman dulu.");
+        // alert("Masukkan nama teman dulu.");
+        setKonf(true)
+        setTimeout(() => {
+          setKonf(false)
+        }, 1000);
+        return;
         return;
         }
-
             if (navigator.share) {
         try {
             await navigator.share({
             title: 'Undangan Pernikahan',
             text: ShareText,
-            url: window.location.href, // opsional, bisa dihilangkan atau diganti
+            // url: window.location.href, // opsional, bisa dihilangkan atau diganti
             });
         } catch (err) {
             alert("Gagal membagikan.");
@@ -66,8 +72,7 @@ import PropTypes from "prop-types"
   //   }
   // };
   
-   const [status, setStatus] = useState(false)
-   const [konf, setKonf] = useState(false)
+
 
   const handleCopy = () => {
   if (namaTeman.trim() === "") {
@@ -89,7 +94,7 @@ import PropTypes from "prop-types"
       })
       .catch((err) => {
         console.error("Gagal menyalin:", err);
-        alert("Gagal menyalin teks.");
+        // alert("Gagal menyalin teks.");
       });
   } else {
     alert("Clipboard tidak didukung di browser ini.");
