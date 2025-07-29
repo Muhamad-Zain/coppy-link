@@ -20,20 +20,20 @@ import PropTypes from "prop-types"
       getData()
     },[])
 
-    const ShareText = `Assalamualaikum.wr.wb \nBismillahirrahmanirrohim \n\nYth. Bapak/Ibu/Saudara/i \n${namaTeman}
+    const ShareText = `Assalamualaikum.wr.wb \nBismillahirrahmanirrohim \n\nYth. Bapak/Ibu/Saudara/i \n\n${namaTeman}
                         
-                    \n\nTanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i, teman sekaligus sahabat, untuk menghadiri acara Pernikahan kami :
+                    \nTanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i, teman sekaligus sahabat, untuk menghadiri acara Pernikahan kami :
 
-                    \n\n*${data?.namaMempelai}*
+                    \n*${data?.namaMempelai}*
 
-                    \n\nBerikut link undangan kami untuk info lengkap dari acara bisa kunjungi :
+                    \nBerikut link undangan kami untuk info lengkap dari acara bisa kunjungi :
                     \n${data?.link}/${formattedText}
 
-                    \n\nMerupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.
+                    \nMerupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.
 
-                    \n\n*Mohon maaf perihal undangan hanya dibagikan melalui pesan ini*.
+                    \n*Mohon maaf perihal undangan hanya dibagikan melalui pesan ini*.
 
-                    \n\nTerima kasih banyak atas perhatiannya.
+                    \nTerima kasih banyak atas perhatiannya.
 
                     \nWassalamu'alaikum Wr. Wb
 
